@@ -12,8 +12,11 @@ export default class AppComponent {
   public mask: Array<string | RegExp>
 
   constructor() {
+    this.textMaskConfig = {
+      mask: ['(', /[1-9]/, /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/],
+      guide: false
+    }
     this.mask = ['(', /[1-9]/, /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/]
-    this.guide = false
     this.myModel = ''
     this.modelWithValue = '5554441234'
     this.formControlInput.setValue('5555551234')
