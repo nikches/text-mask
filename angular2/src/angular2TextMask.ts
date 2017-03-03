@@ -84,12 +84,6 @@ export class MaskedInputDirective implements ControlValueAccessor {
     }
   }
 
-  // ngOnChanges() {
-  //   if (this.textMaskInputElement) {
-  //     this.update()
-  //   }
-  // }
-
   setDisabledState(isDisabled: boolean) {
     this.renderer.setElementProperty(this.element.nativeElement, 'disabled', isDisabled)
   }
