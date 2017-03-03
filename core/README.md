@@ -100,7 +100,7 @@ const textMaskInputElement = createTextMaskInputElement(textMaskConfig)
 textMaskConfig.mask = [ ... ]
 textMaskConfig.guide = true
 
-// now Text Mask will use the mutated config
+// and Text Mask will use the mutated config
 textMaskInputElement.update()
 ```
 
