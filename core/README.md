@@ -82,6 +82,28 @@ textMaskInputElement.update(inputElement.value, textMaskConfig)
 
 The `update` method should be called every time the `inputElement.value` changes.
 
+#### Updating `textMaskConfig`
+
+If you want to be able to mutate the `textMaskConfig` after initializing Text Mask, you need to pass the `textMaskConfig` object by reference.
+
+```js
+const textMaskConfig = {
+  mask: []
+  guide: false,
+  // ...other properties
+}
+
+// pass the `textMaskConfig` object to the `createTextMaskInputElement` method.
+this.textMaskInputElement = createTextMaskInputElement(textMaskConfig)
+
+// now `textMaskConfig` can be mutated
+textMaskConfig.mask = [ ... ]
+textMaskConfig.guide = true
+
+// now Text Mask will use the mutated config
+this.textMaskInputElement.update()
+```
+
 ---
 
 ### `conformToMask(rawValue, mask, config)`
