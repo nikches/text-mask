@@ -94,14 +94,14 @@ const textMaskConfig = {
 }
 
 // pass the `textMaskConfig` object to the `createTextMaskInputElement` method.
-this.textMaskInputElement = createTextMaskInputElement(textMaskConfig)
+const textMaskInputElement = createTextMaskInputElement(textMaskConfig)
 
 // now `textMaskConfig` can be mutated
 textMaskConfig.mask = [ ... ]
 textMaskConfig.guide = true
 
 // now Text Mask will use the mutated config
-this.textMaskInputElement.update()
+textMaskInputElement.update()
 ```
 
 ---
