@@ -6,12 +6,10 @@ export function maskInput(textMaskConfig) {
   const inputHandler = ({target: {value}}) => textMaskInputElement.update(value)
 
   inputElement.addEventListener('input', inputHandler)
-
   textMaskInputElement.update(inputElement.value)
 
   return {
     textMaskInputElement,
-
     destroy() {
       inputElement.removeEventListener('input', inputHandler)
     }
@@ -19,4 +17,5 @@ export function maskInput(textMaskConfig) {
 }
 
 export default maskInput
-export {default as conformToMask} from '../../core/src/conformToMask.js'
+export { default as conformToMask } from '../../core/src/conformToMask.js'
+export { convertMaskToPlaceholder } from '../../core/src/utilities'
